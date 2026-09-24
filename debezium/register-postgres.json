@@ -1,0 +1,17 @@
+{
+  "name": "postgres-source-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "plugin.name": "pgoutput",
+    "database.hostname": "source-db",
+    "database.port": "5432",
+    "database.user": "app_user",
+    "database.password": "app_password",
+    "database.dbname": "app_db",
+    "database.server.name": "fulfillment",
+    "topic.prefix": "fulfillment",
+    "table.include.list": "public.orders",
+    "schema.history.internal.kafka.bootstrap.servers": "kafka:29092",
+    "schema.history.internal.kafka.topic": "schema-changes.orders"
+  }
+}

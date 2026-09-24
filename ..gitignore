@@ -1,0 +1,10 @@
+Set-Content -Path ".gitignore" -Value @"
+__pycache__/
+*.pyc
+setup.py
+.env
+*.log
+airflow/logs/
+*.sqlite
+*.db
+"@
